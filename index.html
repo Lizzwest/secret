@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.24.1/dist/phaser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Butt</title>
+</head>
+<body>
+    <h1>Arts and Farts</h1>
+    <script>
+const scene = new Phaser.Scene("game");
+
+const config = {
+	type: Phaser.AUTO,
+	width: 800,
+	height: 600,
+	scene: scene
+};
+const game = new Phaser.Game(config);
+
+scene.init = function() {
+this.lives = 5
+this.levels = 5
+this.score = 0
+this.score_text;
+this.lives_text;
+};
+
+
+
+scene.preload = function() {
+this.load.image('smoke', 'smokinpiano.png')
+};
+
+scene.create = function() {
+let smoke = this.add.sprite(0, 0, 'smoke')
+smoke.setOrigin(0, 0)
+// this.scoreText = this.add.text(100, 16, 'score: '+this.score, { fontSize: '32px', fill: 'blue' });
+// this.liveText = this.add.text(16, 16, this.sys.game.config.height-50, 'Lives: ' + this.lives, {fontSize: '32px', fill: 'blue'});
+};
+
+scene.update = function() {
+
+};
+
+scene.end = function() {
+
+};
+    </script>
+    
+</body>
+
+</html>
